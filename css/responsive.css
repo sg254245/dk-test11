@@ -105,20 +105,7 @@
     }
 }
 
-/* =============================
-   RESPONSIVE DESIGN - SINGLE COLUMN FOR TABLET & MOBILE
-   ============================= */
-@media screen and (min-width: 401px) and (max-width: 1020px) {
-    /* VIDEO SECTION: Convert to single column */
-    .three-grid-container {
-        grid-template-columns: 1fr; /* Single column layout */
-    }
-    .three-grid-sidebar,
-    .three-grid-main-content {
-        width: 100%;
-        height: auto;
-    }
-}
+
 
 /* =============================
   Character Reference Cards - Container (Tablet)
@@ -202,5 +189,32 @@
     }
     .menu-icon {
         font-size: 60px; /* Reduced hamburger icon size */
+    }
+}
+
+
+
+
+/* For devices with widths 400px and below (mobile) */
+@media screen and (max-width: 400px) {
+    .three-grid-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    .three-grid-sidebar,
+    .three-grid-main-content {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Existing styles for devices between 401px and 1020px */
+@media screen and (min-width: 401px) and (max-width: 1020px) {
+    .three-grid-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    .three-grid-sidebar,
+    .three-grid-main-content {
+        width: 100%;
+        height: auto;
     }
 }
