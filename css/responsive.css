@@ -2,17 +2,14 @@
    DK RAP SONG CSS DOCUMENT - UPDATED 2025 - Responsive Design 
    ============================= */
 
-* {
+   * {
     outline: 1px solid red;
     box-sizing: border-box;
 }
 
 /* =============================
-   Header
-   ============================= */
-/* ============================
    GLOBAL NAVIGATION STYLES
-   ============================ */
+   ============================= */
 
 /* Hide the checkbox completely */
 .menu-checkbox {
@@ -30,10 +27,10 @@
     z-index: 1001;
 }
 
-/* ============================
+/* =============================
    TABLET STYLES (501px - 1040px)
-   ============================ */
-   @media screen  and (max-width: 1020px) {
+   ============================= */
+@media screen and (max-width: 1020px) {
 
     /* Tablet Header */
     header {
@@ -60,69 +57,62 @@
         display: block;
     }
 
-  /* Hide the navigation menu by default */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #ff5733 !important; /* Tablet menu background */
-    position: absolute;
-    top: 260px; /* Adjust below logo */
-    left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
-    width: 90%; /* Adjust width */
-    padding: 20px 0;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
+    /* Hide the navigation menu by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #ff5733 !important; /* Tablet menu background */
+        position: absolute;
+        top: 260px; /* Adjust below logo */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 90%; /* Adjust width */
+        padding: 20px 0;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
 
-.nav-links li {
-    padding: 10px;
-    text-align: center;
-}
+    .nav-links li {
+        padding: 10px;
+        text-align: center;
+    }
 
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-    display: block;
-    text-align: center;
-}
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+        text-align: center;
+    }
 
-/* When checkbox is checked, show menu */
-.menu-checkbox:checked ~ nav .nav-links {
-    display: flex;
+    /* When checkbox is checked, show menu */
+    .menu-checkbox:checked ~ nav .nav-links {
+        display: flex;
+    }
 }
-}
-
-
 
 /* =============================
-   Hero Box
+   Hero Box (Tablet)
    ============================= */
-   @media screen and (min-width: 401px) and (max-width: 1020px) {
-    /* Hero Section */
+@media screen and (min-width: 401px) and (max-width: 1020px) {
     .hero-box {
         padding: 30px;
     }
-
     .hero-box p {
         padding: 0 20px;
     }
 }
 
-
 /* =============================
    RESPONSIVE DESIGN - SINGLE COLUMN FOR TABLET & MOBILE
    ============================= */
-   @media screen and (min-width: 401px) and (max-width: 1020px) {
-    
+@media screen and (min-width: 401px) and (max-width: 1020px) {
     /* VIDEO SECTION: Convert to single column */
     .three-grid-container {
         grid-template-columns: 1fr; /* Single column layout */
     }
-
     .three-grid-sidebar,
     .three-grid-main-content {
         width: 100%;
@@ -131,14 +121,12 @@
 }
 
 /* =============================
-  Character Reference Cards - Container
+  Character Reference Cards - Container (Tablet)
 ============================= */
 @media screen and (min-width: 401px) and (max-width: 1020px)  {
-.character-reference-box {
-    width: 100%;
-}
-/* Responsive for Tablets */
-
+    .character-reference-box {
+        width: 100%;
+    }
     .character-reference-grid-container {
         grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
         gap: 120px 40px; /* More spacing */
@@ -146,61 +134,73 @@
     }
 }
 
-/* Responsive for Mobile */
+/* =============================
+   Mobile Styles (max-width: 400px)
+   ============================= */
 @media (max-width: 400px) {
+
+    /* Character Reference Cards - Container */
     .character-reference-grid-container {
         grid-template-columns: 1fr; /* Single column for mobile */
-        gap: 150px; /* Increase spacing */
-        padding: 60px 100px; /* More padding for better spacing */
+        gap: 20px; /* Reduced gap for tighter layout */
+        padding: 20px; /* Reduced padding */
     }
-}
-/* Responsive Card Spacing */
-@media (max-width: 400px) {
+
+    /* Responsive Card Spacing */
     .card {
-        padding: 40px 25px 25px; /* Increase padding for better spacing */
-    }
-}
-
-/* =============================
-  Responsive Design - Tablet (1024px and smaller)
-============================= */
-@media screen and (max-width: 1020px)  {
-    .article-grid {
-        grid-template-columns: 1fr; /* Switch to single-column */
-        gap: 50px; /* Increase vertical spacing */
-        width: 90%; /* Make content slightly wider */
+        padding: 20px 15px 15px; /* Reduced padding for mobile */
     }
 
-    .article-item {
-        padding: 25px;
-    }
-}
-
-@media screen and (max-width: 768px) {
     /* Force the origin story container to stack its asides vertically */
     #origin-story {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     /* Ensure each aside takes full width */
     #origin-story aside {
-      width: 100%;
-      margin-bottom: 20px; /* Add spacing between elements if needed */
+        width: 100%;
+        margin-bottom: 15px; /* Reduced spacing between elements */
     }
     
     /* Adjust the development section to a single column grid */
     .origin-story-grid {
-      display: grid;
-      grid-template-columns: 1fr; /* Single column layout */
-      gap: 20px; /* Adjust gap as needed */
-      padding: 0 20px; /* Optional: add horizontal padding */
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px; /* Reduced gap */
+        padding: 0 15px; /* Reduced horizontal padding */
     }
     
-    /* Optional: Make images responsive */
+    /* Make images responsive */
     .score-image {
-      width: 100%;
-      height: auto;
+        width: 100%;
+        height: auto;
     }
-  }
-  
+
+    /* Article Grid Adjustments */
+    .article-grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 20px; /* Reduced vertical spacing */
+        width: 100%;
+        padding: 0 15px; /* Reduced padding */
+    }
+    .article-item {
+        padding: 15px;
+    }
+
+    /* Adjust Hero Section for Mobile */
+    .hero-box {
+        padding: 15px;
+    }
+    .hero-box p {
+        padding: 0 10px;
+    }
+    
+    /* Optional adjustments for logo and hamburger icon */
+    .logo-link {
+        font-size: 32px; /* Slightly smaller logo text */
+    }
+    .menu-icon {
+        font-size: 60px; /* Reduced hamburger icon size */
+    }
+}
