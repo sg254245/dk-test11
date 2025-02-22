@@ -146,14 +146,15 @@
     }
 }
 
-/* Responsive for Mobile */
 @media (max-width: 400px) {
     .character-reference-grid-container {
-        grid-template-columns: 1fr; /* Single column for mobile */
-        gap: 150px; /* Increase spacing */
-        padding: 60px 100px; /* More padding for better spacing */
+        grid-template-columns: 1fr;
+        gap: 5vw;
+        padding: 5vw; /* Responsive padding */
     }
 }
+
+
 /* Responsive Card Spacing */
 @media (max-width: 400px) {
     .card {
